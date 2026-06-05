@@ -117,6 +117,11 @@ function applyRoadFilter(){
     var pill=r.querySelector(".hcpill");
     if(pill) pill.textContent=Number(hcForRow(r.dataset.keys||"",activeRoad)).toFixed(1);
   });
+  var m=1;
+  [].forEach.call(document.querySelectorAll("#tbBelow .rrow"),function(r){
+    if(r.style.display==="none") return;
+    r.querySelector("td").textContent=m++;
+  });
   updateRoadCap(activeRoad);
 }
 function renderExec(){
