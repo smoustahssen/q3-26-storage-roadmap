@@ -115,7 +115,7 @@ function applyRoadFilter(){
     if(r.style.display==="none") return;
     r.querySelector("td").textContent=n++;
     var pill=r.querySelector(".hcpill");
-    if(pill){var rt=(r.dataset.teams||"").split(",").filter(Boolean);var hcT=(activeRoad==="all"||rt.indexOf(activeRoad)>-1)?"all":activeRoad;pill.textContent=Number(hcForRow(r.dataset.keys||"",hcT)).toFixed(1);}
+    if(pill) pill.textContent=Number(hcForRow(r.dataset.keys||"",activeRoad)).toFixed(1);
   });
   var m=1;
   [].forEach.call(document.querySelectorAll("#tbBelow .rrow"),function(r){
